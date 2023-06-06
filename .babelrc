@@ -1,0 +1,24 @@
+/*
+ * @Description: 
+ * @version: 
+ * @Author: zouwenqin
+ * @Date: 2023-05-29 18:50:09
+ * @LastEditors: zouwenqin
+ * @LastEditTime: 2023-05-29 19:11:20
+ */
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": { //编译目标
+                    "browsers": [ //浏览器支持为目标
+                        ">1%", // 所有占有率大于1%的浏览器
+                        "last 2 versions", // 支持浏览器厂商的最后两个版本
+                        "not ie<=8" // 不支持小于ie8版本
+                    ]
+                }
+            }
+        ]
+    ]
+}

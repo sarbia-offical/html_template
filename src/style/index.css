@@ -1,0 +1,37 @@
+.box {
+  position: relative;
+  width: 180px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background-color: #0e1538;
+  inset: 5px;
+  border-radius: 20px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120%;
+  background: linear-gradient(#00ccff, #d500f9);
+  transition: all 0.3s linear;
+}
+.box:hover::before {
+  transform: rotate(180deg);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
